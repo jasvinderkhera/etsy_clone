@@ -16,3 +16,8 @@
   --footer_background: #2638c0;
   --footer_app: #122868;
 }
+
+.center_container{
+  width: 1280px;
+  margin: auto;
+}

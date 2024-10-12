@@ -2,7 +2,7 @@
   width: 1280px;
 }
 .etsy_navbar .logo {
-  height: 40px;
+  height: 35px;
   width: 80px;
 }
 
@@ -75,7 +75,7 @@
 
 .searchbar .nav_search_input {
   width: 780px;
-  height: 45px;
+  height:45px;
   border: 2px solid;
   border-radius: 25px;
   outline: none;
