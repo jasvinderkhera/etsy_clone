@@ -1,0 +1,128 @@
+.etsy_navbar {
+  width: 1280px;
+}
+.etsy_navbar .logo {
+  height: 40px;
+  width: 80px;
+}
+
+.top_nav_bar{
+  font-size: 14px;
+}
+
+.etsy_navbar .logo img {
+  height: 100%;
+  width: 100%;
+}
+.categories {
+  padding: 8px 13px;
+  border-radius: 18px;
+  position: relative;
+  transition: 400ms;
+}
+.hover_effect{
+  padding: 8px 13px;
+  border-radius: 18px;
+}
+.hover_effect:hover{
+
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.256);
+}
+.categories:hover{
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.256);
+  transition: 400ms;
+}
+.categories .categories_tab {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: -10px;
+  height: 550px;
+  width: 320px;
+  overflow-y: scroll;
+  background-color: white;
+  box-shadow: 2px 3px 7px 0px rgb(128 128 128);
+  border-radius: 10px;
+  z-index: 1;
+}
+.categories_tab::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: rgb(20, 18, 18);
+
+  left: -20px;
+}
+.cat_options {
+  display: block;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+.cat_options:hover{
+  background-color: rgba(128, 128, 128, 0.451);
+  text-decoration: underline;
+}
+
+.searchbar {
+  position: relative;
+  overflow: hidden;
+}
+
+.searchbar .nav_search_input {
+  width: 780px;
+  height: 45px;
+  border: 2px solid;
+  border-radius: 25px;
+  outline: none;
+  padding: 15px;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.searchbar .navbar_search_icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: #f27224;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 200ms;
+}
+
+.searchbar:hover .navbar_search_icon {
+  top: 2px;
+  right: 3px;
+  padding: 13px 13px;
+  border-radius: 0px 100% 100% 0px;
+  background-color: #e4864c;
+  transition: 200ms;
+}
+
+.rest_logos .nation {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 2px solid;
+  overflow: hidden;
+}
+.rest_logos .nation img {
+  height: 100%;
+  width: 100%;
+}
+
+.rest_logos .rest_icons {
+  font-size: 18px;
+}
+
+.bottom_nav_bar {
+  width: 1000px;
+  margin: auto;
+  font-size: 13px;
+  font-weight: 600;
+}

@@ -1,0 +1,50 @@
+.orangebox {
+  height: 160px;
+  background-color: var(--orange_color);
+  padding: 15px 30px;
+}
+
+.mid_container {
+  height: 300px;
+  width: 1280px;
+  margin: auto;
+  position: relative;
+}
+
+.mid_container h2{
+  font-family: "Stag-italic";
+}
+
+.orangebox .main_catg {
+  position: absolute;
+  top: 70px;
+  left: 150px;
+}
+
+.orangebox .catg_div {
+  height: 180px;
+  width: 130px;
+}
+.orangebox .catg_div img {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: 400ms;
+}
+.orangebox .catg_div p {
+  width: 100px;
+  margin: auto;
+  font-weight: 600;
+}
+.main_catg .catg_div:hover.catg_div img{
+  transform: scale(1.1);
+  transition: 400ms;
+  cursor: pointer;
+}
+.main_catg .catg_div:hover.catg_div p{
+  color: rgba(0, 0, 0, 0.667);
+}
+.main_catg .catg_div:hover.catg_div{
+ border-bottom: 1px solid;
+}
