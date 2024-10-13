@@ -2,6 +2,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+body{
+  min-height: 100vh;
+  width: 100%;
+}
 
 @font-face {
   font-family: "Stag-italic";
@@ -18,6 +22,6 @@
 }
 
 .center_container{
-  width: 1280px;
+  width: 1300px;
   margin: auto;
 }

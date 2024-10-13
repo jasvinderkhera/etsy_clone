@@ -15,7 +15,7 @@ function Navbar() {
     }
   return (
     <div className='container etsy_navbar pt-3 px-0'>
-       <div className="top_nav_bar d-flex gap-3 align-items-center justify-content-between">
+       <div className="top_nav_bar d-flex gap-2 align-items-center justify-content-center">
        <div className="logo">
         <img src={logo} alt="" />
         </div>
@@ -49,13 +49,15 @@ function Navbar() {
             <i class="fa-solid fa-magnifying-glass navbar_search_icon"></i>
 
         </div>
-        <div className="nav_leftside d-flex gap-4 align-items-center">
+        <div className="nav_leftside d-flex gap-2 align-items-center">
             <div className="sign_in">
             <Link to={"/signin"} className='nav-link hover_effect'>Sign in</Link>
             </div>
-            <div className="rest_logos d-flex gap-4 align-items-center">
+            <div className="rest_logos d-flex gap-2 align-items-center">
                 <div className="nation">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaNIVC20pTJpnaO8qV6iWQwOssCaxIkegjjQ&s" alt="" />
+                  <div className="nation_img">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaNIVC20pTJpnaO8qV6iWQwOssCaxIkegjjQ&s" alt="" />
+                  </div>
                 </div>
                 <div className="wishlist ">
                 <i class="fa-regular fa-heart rest_icons"></i>

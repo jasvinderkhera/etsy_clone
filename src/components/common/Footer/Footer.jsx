@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./Footer.css"
 
 function Footer() {
@@ -24,6 +25,99 @@ function Footer() {
             </div>
             <p className='mb-0 text-white'>Etsy is powered by 100% renewable electricity.</p>
           </div>
+        </div>
+        <div className="footer_main_container">
+          <div className="grid_container">
+            <div className="row">
+              <div className="col-md-4 app_container p-3">
+                <img src="https://seeklogo.com/images/E/etsy-logo-9CE3C0743D-seeklogo.com.png" alt="" />
+                <Link className='nav-link app_link'>Download the Etsy App</Link>
+              </div>
+              <div className="col-md-8 px-4 py-4">
+                <div className="row">
+                  <div className="col-md-3 px-4 f_list f_1">
+                    <h6 className='text-white'>Shop</h6>
+                    <ul>
+                      <li><a href="" className='nav-link'>Gift cards</a></li>
+                      <li><a href="" className='nav-link'>Etsy Registry</a></li>
+                      <li><a href="" className='nav-link'>Sitemap</a></li>
+                      <li><a href="" className='nav-link'>Etsy blog</a></li>
+                      <li><a href="" className='nav-link'>Etsy United Kingdom</a></li>
+                      <li><a href="" className='nav-link'>Etsy Germany</a></li>
+                      <li><a href="" className='nav-link'>Etsy Canada</a></li>
+                    </ul>
+                  </div>
+                  <div className="col-md-3 px-4 f_list f_1">
+                    <h6 className='text-white'>Sell</h6>
+                    <ul>
+                      <li><a href="" className='nav-link'>Sell on Etsy</a></li>
+                      <li><a href="" className='nav-link'>Teams</a></li>
+                      <li><a href="" className='nav-link'>Forums</a></li>
+                      <li><a href="" className='nav-link'>Affiliates & Creators</a></li>
+                    </ul>
+                  </div>
+                  <div className="col-md-3 px-4 f_list f_1">
+                    <h6 className='text-white'>About</h6>
+                    <ul>
+                      <li><a href="" className='nav-link'>Etsy, Inc.</a></li>
+                      <li><a href="" className='nav-link'>Policies</a></li>
+                      <li><a href="" className='nav-link'>Investors</a></li>
+                      <li><a href="" className='nav-link'>Carrers</a></li>
+                      <li><a href="" className='nav-link'>Press</a></li>
+                      <li><a href="" className='nav-link'>Impact</a></li>
+                      <li><a href="" className='nav-link'>Legal imprint</a></li>
+                    </ul>
+                  </div>
+                  <div className="col-md-3 px-4 f_list f_1">
+                    <h6 className='text-white'>Help</h6>
+                    <ul>
+                      <li><a href="" className='nav-link'>Help Centre</a></li>
+                      <li><a href="" className='nav-link'>Privacy settings</a></li>
+                    </ul>
+                    <div className="social_media d-flex gap-4 text-white">
+                      <div className="footer_social">
+                      <i class="fa-brands fa-instagram"></i>
+                      </div>
+                      <div className="footer_social">
+                      <i class="fa-brands fa-square-facebook"></i>
+                      </div>
+                      <div className="footer_social">
+                      <i class="fa-brands fa-pinterest"></i>
+                      </div>
+                      <div className="footer_social">
+                      <i class="fa-brands fa-twitter"></i>
+                      </div>
+                      <div className="footer_social">
+                      <i class="fa-brands fa-youtube"></i>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="footer_end bg-dark">
+       <div className="footer_end_container">
+        <div className="d-flex">
+          <span> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaNIVC20pTJpnaO8qV6iWQwOssCaxIkegjjQ&s" alt="" style={{height:"20px",width:"20px",borderRadius:"50%"}} /></span>
+          <span className='text-white ps-2 fw-bold'>India</span>
+          <span className='text-white ps-2 fw-bold'>|</span>
+          <span className='text-white ps-2 fw-bold'>English (IN)</span>
+          <span className='text-white ps-2 fw-bold'>|</span>
+          <span className='text-white ps-2 fw-bold'>₹(INR)</span>
+        </div>
+        <div className="d-flex gap-3 text-white">
+          <span className='ps-2'><i class="fa-regular fa-copyright"></i> 2024 Etsy, Inc</span>
+          <a href="" className='text-white'>Terms of Use</a>
+          <a href="" className='text-white'>Privacy</a>
+          <a href="" className='text-white'>Interest-based ads</a>
+          <a href="" className='text-white'>Local Shops</a>
+          <a href="" className='text-white'>Region</a>
+        </div>
+       </div>
+
         </div>
     </div>
   )
