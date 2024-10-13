@@ -51,6 +51,12 @@
 .main_catg .catg_div:hover.catg_div{
  border-bottom: 1px solid;
 }
+
+
+
+/* -------------------------------------------------------------------categories div---------------------------------------------------- */
+
+
 .categories_div{
   height: 260px;
   width: 195px;
@@ -65,3 +71,72 @@
   border-radius: 15px;
   margin-bottom: 8px;
 }
+
+
+
+/* -------------------------------------------------------------------categories div end ------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------gift div----- ------------------------------------------------- */
+
+.gift_div{
+  height: 340px;
+  width: 270px;
+  border-radius: 10px;
+  transition: 300ms;
+}
+.gift_div img{
+  height: 200px;
+  width: 250px;
+  margin: 5px;
+}
+.gift_div .gift_img_div{
+  position: relative;
+}
+.gift_div .wishlist_icon{
+position: absolute;
+border-radius: 50%;
+top: 30px;
+right: 20px;
+padding: 8px;
+background-color: white;
+opacity: 0;
+transition: 100ms;
+}
+.gift_div .gift_details{
+  padding: 5px;
+}
+
+.gift_div .gift_details h3{
+  height: 40px;
+  overflow: hidden;
+}
+.gift_div .gift_details .ratings i{
+  font-size: 12px;
+}
+.gift_div .gift_details .ratings span{
+  font-size: 13px;
+  padding-left: 5px;
+  color: rgba(0, 0, 0, 0.601);
+}
+
+.gift_div:hover{
+  box-shadow: -1px 2px 5px 1px gray;
+  cursor: pointer;
+  transition: 300ms;
+}
+.gift_div:hover .wishlist_icon{
+  top: 10px;
+  opacity: 1;
+  transition: 100ms;
+}
+
+.actual_price, .discount{
+  font-size: 12px;
+}
+
+
+
+
+/* -------------------------------------------------------------------gift div end ------------------------------------------------- */

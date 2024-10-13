@@ -3,6 +3,7 @@ import "./Home.css"
 
 function Home() {
     const [categories, setCategories] = useState([])
+    const [gifts, setGifts] = useState([])
 
     useEffect(()=>{
         const fetchData = async() =>  {
@@ -11,9 +12,10 @@ function Home() {
               if(!response.ok){
                 throw new Error('API is not working....')
               }
-              const data =  await response.json().then((Data)=>Data.categories)
-              console.log(data)
-              setCategories(data)
+              const data =  await response.json().then((Data)=>Data)
+              console.log(data.gifts)
+              setCategories(data.categories)
+              setGifts(data.gifts)
             }catch(error){
             }
             
@@ -67,10 +69,29 @@ function Home() {
         </div>
         <div className="popular_gifts center_container py-4 mt-5">
         <h3 className='mb-4'>Popular gifts right now</h3>
-        <div className="d-flex gift_container">
-            <div className="gift_div">
-                
+        <div className="d-flex gap-2 gift_container">
+            {gifts ? gifts.map((item)=>(
+                <div className="gift_div">
+               <div className="gift_img_div">
+               <img src={item.src} alt="" />
+               <i class="fa-regular fa-heart wishlist_icon"></i>
+               </div>
+                <div className="gift_details">
+                    <h3 className='fs-6 mt-1'>{item.name}</h3>
+                    <div className="ratings">
+                        {item.rating ? item.rating.map((rate)=>(
+                            <i className={rate} ></i>
+                        )): ""}
+                        <span>({item.rating_no})</span>
+                    </div>
+                    <div className="price">
+                        <span className='fw-bold'>₹{item.price}</span>
+                        <span className='text-success ps-1 text-decoration-line-through actual_price'>₹{item.actual_price}</span>
+                        <span className='text-success ps-1 discount'>({item.discount}% off)</span>
+                    </div>
+                </div>
             </div>
+            )): <h4>No Data Found...</h4>}
         </div>
         </div>
     </div>
