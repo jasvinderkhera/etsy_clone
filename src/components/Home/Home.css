@@ -12,7 +12,7 @@
   position: relative;
 }
 
-.mid_container h2{
+.mid_container h2 {
   font-family: "Stag-italic";
 }
 
@@ -40,103 +40,400 @@
   font-weight: 600;
   text-align: center;
 }
-.main_catg .catg_div:hover.catg_div img{
+.main_catg .catg_div:hover.catg_div img {
   transform: scale(1.1);
   transition: 400ms;
   cursor: pointer;
 }
-.main_catg .catg_div:hover.catg_div p{
+.main_catg .catg_div:hover.catg_div p {
   color: rgba(0, 0, 0, 0.667);
 }
-.main_catg .catg_div:hover.catg_div{
- border-bottom: 1px solid;
+.main_catg .catg_div:hover.catg_div {
+  border-bottom: 1px solid;
 }
-
-
 
 /* -------------------------------------------------------------------categories div---------------------------------------------------- */
 
-
-.categories_div{
+.categories_div {
   height: 260px;
   width: 195px;
 }
-.categories_div:hover img{
+.categories_div:hover img {
   box-shadow: -1px 2px 5px 1px gray;
   cursor: pointer;
 }
-.categories_div img{
+.categories_div img {
   width: 195px;
   height: 245px;
   border-radius: 15px;
   margin-bottom: 8px;
 }
 
-
-
 /* -------------------------------------------------------------------categories div end ------------------------------------------------- */
-
-
 
 /* -------------------------------------------------------------------gift div----- ------------------------------------------------- */
 
-.gift_div{
+.gift_div {
   height: 340px;
   width: 270px;
   border-radius: 10px;
   transition: 300ms;
 }
-.gift_div img{
+.gift_div img {
   height: 200px;
   width: 250px;
   margin: 5px;
 }
-.gift_div .gift_img_div{
+.gift_div .gift_img_div {
   position: relative;
 }
-.gift_div .wishlist_icon{
-position: absolute;
-border-radius: 50%;
-top: 30px;
-right: 20px;
-padding: 8px;
-background-color: white;
-opacity: 0;
-transition: 100ms;
+.gift_div .wishlist_icon {
+  position: absolute;
+  border-radius: 50%;
+  top: 30px;
+  right: 20px;
+  padding: 8px;
+  background-color: white;
+  opacity: 0;
+  transition: 100ms;
 }
-.gift_div .gift_details{
+.gift_div .gift_details {
   padding: 5px;
 }
 
-.gift_div .gift_details h3{
+.gift_div .gift_details h3 {
   height: 40px;
   overflow: hidden;
 }
-.gift_div .gift_details .ratings i{
+.gift_div .gift_details .ratings i {
   font-size: 12px;
 }
-.gift_div .gift_details .ratings span{
+.gift_div .gift_details .ratings span {
   font-size: 13px;
   padding-left: 5px;
   color: rgba(0, 0, 0, 0.601);
 }
 
-.gift_div:hover{
+.gift_div:hover {
   box-shadow: -1px 2px 5px 1px gray;
   cursor: pointer;
   transition: 300ms;
 }
-.gift_div:hover .wishlist_icon{
+.gift_div:hover .wishlist_icon {
   top: 10px;
   opacity: 1;
   transition: 100ms;
 }
 
-.actual_price, .discount{
+.actual_price,
+.discount {
   font-size: 12px;
 }
 
-
-
-
 /* -------------------------------------------------------------------gift div end ------------------------------------------------- */
+
+/* -------------------------------------------------------------------halloween shop------------------------------------------------- */
+
+.halloween_1 .tagline {
+  height: 270px;
+  width: 420px;
+  padding: 70px 0;
+}
+
+.halloween_1 .halo_p1 {
+  font-size: 13px;
+  color: #000000a0;
+}
+
+.halloween_1 .halo_p2 {
+  font-size: 30px;
+}
+.halloween_1 .halo_right:hover {
+  padding-left: 5px;
+  transition: 300ms;
+}
+
+.halo_img1 img {
+  height: 270px;
+  width: 300px;
+}
+.halo_img2 img {
+  height: 270px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.halo_img3 img {
+  height: 270px;
+  width: 330px;
+}
+.halo_v1 {
+  width: 420px;
+  height: 340px;
+}
+.halo_v1 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.halo_v2 video {
+  width: 300px;
+  height: 340px;
+  object-fit: cover;
+}
+.halo_img21 img {
+  height: 340px;
+  width: 200px;
+  object-fit: cover;
+}
+.halow_div {
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.halow_div .wishlist_icon {
+  position: absolute;
+  border-radius: 50%;
+  top: 30px;
+  right: 20px;
+  padding: 8px;
+  background-color: white;
+  opacity: 0;
+  transition: 100ms;
+}
+.halo_price {
+  opacity: 0;
+  padding: 4px 10px;
+  font-size: 13px;
+  background-color: white;
+  border-radius: 12px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  transition: 100ms;
+}
+
+.halow_div:hover {
+  box-shadow: -1px 2px 5px 1px gray;
+  cursor: pointer;
+  transition: 300ms;
+}
+.halow_div:hover .halo_price {
+  opacity: 1;
+  bottom: 20px;
+  transition: 100ms;
+}
+.halow_div:hover .wishlist_icon {
+  top: 10px;
+  opacity: 1;
+  transition: 100ms;
+}
+
+/* -------------------------------------------------------------------halloween shop end ------------------------------------------------- */
+
+/* -------------------------------------------------------------------Autumn------------------------------------------------- */
+
+.autumn_cont1 {
+  width: 880px;
+  height: 480px;
+}
+.autumn_cont2 {
+  width: 440px;
+  height: 480px;
+}
+.autmn_video2 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.autumn_cont1 .tagline {
+  width: 395px;
+  height: 215px;
+}
+.autumn_img1 {
+  height: 190px;
+  width: 190px;
+}
+
+.autumn_img1 img,
+.autumn_img1 video {
+  height: 190px;
+  width: 190px;
+  object-fit: cover;
+}
+.autumn_cont2 .autmn_video2 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.autumn_img1 {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.autumn_img1 .wishlist_icon {
+  position: absolute;
+  border-radius: 50%;
+  top: 30px;
+  right: 20px;
+  padding: 8px;
+  background-color: white;
+  opacity: 0;
+  transition: 100ms;
+}
+
+.autmn_video2 .wishlist_icon {
+  position: absolute;
+  border-radius: 50%;
+  top: 30px;
+  right: 20px;
+  padding: 8px;
+  background-color: white;
+  opacity: 0;
+  transition: 100ms;
+}
+
+.autumn_img1:hover {
+  box-shadow: -1px 2px 5px 1px gray;
+  cursor: pointer;
+  transition: 300ms;
+}
+.autumn_img1:hover .halo_price {
+  opacity: 1;
+  bottom: 20px;
+  transition: 100ms;
+}
+.autumn_img1:hover .wishlist_icon {
+  top: 10px;
+  opacity: 1;
+  transition: 100ms;
+}
+.autmn_video2:hover .wishlist_icon {
+  opacity: 1;
+  top: 20px;
+  transition: 100ms;
+}
+.autmn_video2:hover .halo_price {
+  opacity: 1;
+  bottom: 20px;
+  transition: 100ms;
+}
+.autmn_video2:hover {
+  cursor: pointer;
+  transition: 300ms;
+}
+
+/* -------------------------------------------------------------------Autumn end ------------------------------------------------- */
+
+/* -------------------------------------------------------------------Extraordinary------------------------------------------------- */
+
+.extraordinary_item {
+  border-radius: 10px;
+  transition: 300ms;
+}
+.extraordinary_item .extra_o_image {
+  height: 240px;
+  width: 240px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.extraordinary_item .extra_o_image img {
+  height: 100%;
+  width: 100%;
+}
+.extraordinary_item .extra_detail {
+  font-size: 20px;
+  padding-right: 20px;
+}
+.extraordinary_item:hover {
+  box-shadow: -1px 2px 5px 1px gray;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+/* -------------------------------------------------------------------Extraordinary end ------------------------------------------------- */
+
+/* ----------------------------------------------------------Discover------------------------------------------------------------------ */
+
+.discover .halo_p1 {
+  font-size: 13px;
+  color: #000000bc;
+}
+
+.discover .halo_p2 {
+  font-size: 30px;
+}
+
+.discover_link {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 60px;
+  border: 2px solid;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: 200ms;
+}
+.discover_link:hover {
+  transform: scale(1.01);
+  box-shadow: -1px 2px 5px 1px gray;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.discover_items {
+  height: 480px;
+  width: 310px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 200ms;
+}
+.discover_items:hover{
+  box-shadow: -1px 2px 5px 1px gray;
+  cursor: pointer;
+    transition: 200ms;
+}
+.discover_item_img {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+.discover_item_img_last {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.discover_item_img_last img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.discover_item_img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.discover_item_detail img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.discover_item_detail span {
+  font-size: 20px;
+}
+
+.discover_item_img .wishlist_icon,
+.discover_item_img_last .wishlist_icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border-radius: 50%;
+  padding: 8px;
+  background-color: white;
+}
+
+/* ----------------------------------------------------------Discover end-------------------------------------------------------------- */
