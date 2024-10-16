@@ -146,3 +146,41 @@
   font-size: 13px;
   font-weight: 600;
 }
+
+
+@media screen and (max-width:768px) {
+  .etsy_navbar {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .etsy_navbar .logo {
+    height: 25px;
+    width: 50px;
+  }
+  .mob_navbar{
+    width: 100%;
+  }
+  .mob_searchbar{
+    position: relative;
+  }
+  .mob_categories i{
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 50%;
+  }
+  .mob_searchbar input{
+    border-radius: 20px;
+    width: 100%;
+    width: 320px;
+  }
+  .mob_searchbar i{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    padding: 8px;
+    background-color: #e4864c;
+    color: white;
+    border-radius: 50%;
+  }
+}

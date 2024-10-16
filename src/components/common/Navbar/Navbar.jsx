@@ -14,12 +14,12 @@ function Navbar() {
         }
     }
   return (
-    <div className='container etsy_navbar pt-3 px-0'>
-       <div className="top_nav_bar d-flex gap-2 align-items-center justify-content-center">
+    <div className='container etsy_navbar pt-md-3 pt-0 px-0 px-2 px-md-0'>
+       <div className="top_nav_bar d-flex gap-2 align-items-center justify-content-md-center justify-content-between">
        <div className="logo">
         <img src={logo} alt="" />
         </div>
-        <div className="categories d-flex gap-2 align-items-center" onClick={toggle}>
+        <div className="categories d-md-flex d-none gap-2 align-items-center" onClick={toggle}>
         <i class="fa-solid fa-bars"></i>
         <span className='nav_categories'>Categories</span>
         <div className="categories_tab" style={ cat==="show"? {display:"block"} : {display:"none"}}>
@@ -44,7 +44,7 @@ function Navbar() {
 
         </div>
         </div>
-        <div className="searchbar">
+        <div className="searchbar d-md-block d-none">
             <input type="text" placeholder='Search for anything' className='nav_search_input' />
             <i class="fa-solid fa-magnifying-glass navbar_search_icon"></i>
 
@@ -71,7 +71,7 @@ function Navbar() {
             </div>
         </div>
        </div>
-       <div className="bottom_nav_bar d-flex justify-content-center py-1">
+       <div className="bottom_nav_bar d-md-flex d-none justify-content-center py-1">
        <div className="gifts d-flex gap-2 align-items-center px-3 py-2">
                 <i class="fa-solid fa-gift rest_icons"></i>
                 <span>Gifts</span>
@@ -81,6 +81,15 @@ function Navbar() {
                 <a href="" className='nav-link d-inline-block px-4 py-2'>Fashion Finds</a>
                 <a href="" className='nav-link d-inline-block px-4 py-2'>Registry</a>
 
+       </div>
+       <div className="mob_navbar d-flex py-2 d-md-none gap-2 align-items-center">
+        <div className="mob_categories">
+            <i className='fa-solid fa-bars'></i>
+        </div>
+        <div className="mob_searchbar">
+            <input type="text" className='form-control px-2' placeholder='Search for anything'/>
+            <i className='fa-solid fa-magnifying-glass'></i>
+        </div>
        </div>
     </div>
   )

@@ -93,3 +93,55 @@ text-decoration: underline dotted;
     padding: 25px;
     font-size: 13px;
 }
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+@media screen and (max-width:768px) {
+    .footer_container .footer_main_container .grid_container {
+        width: 100%;
+        margin: auto;
+    }
+    .footer_container .footer_main_container .grid_container .app_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        background-color: var(--footer_app);
+    }
+    .footer_container .footer_main_container .grid_container .app_container img {
+        height: 60px;
+        width: 60px;
+        border-radius: 15px;
+        /* margin-top: 20px; */
+    }
+    .footer_container .footer_main_container .grid_container .app_container .app_link {
+        display: inline-block;
+        color: white;
+        background-color: var(--footer_background);
+        padding: 8px 10px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 14px;
+        margin-top: 0;
+    }
+    
+.mail_div {
+    margin: auto;
+    width: 100%;
+    height: 45px;
+    border: 1px solid gray;
+    display: flex;
+    border-radius: 25px;
+    overflow: hidden;
+}
+    
+.mail_div input {
+    width: 100%;
+    height: 45px;
+    padding: 4px 15px;
+    border: none;
+}
+}

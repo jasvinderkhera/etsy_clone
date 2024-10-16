@@ -35,7 +35,7 @@ function Home() {
           <h2 className="text-center">
             Discover the latest trends from small shops.
           </h2>
-          <div className="main_catg d-flex gap-5">
+          <div className="main_catg d-flex gap-md-5 gap-3 flex-wrap">
             <div className="catg_div">
               <img
                 src="https://i.etsystatic.com/26898518/r/il/d727b9/3193550477/il_300x300.3193550477_cydu.jpg"
@@ -100,7 +100,7 @@ function Home() {
       </div>
       <div className="popular_gifts center_container py-4 mt-5">
         <h3 className="mb-4">Popular gifts right now</h3>
-        <div className="d-flex gap-2 gift_container">
+        <div className="d-flex flex-wrap flex-md-nowrap gap-md-2 gap-1 gift_container">
           {gifts ? (
             gifts.map((item) => (
               <div className="gift_div" key={item.id}>
@@ -543,6 +543,9 @@ function Home() {
               </div>
             </div>
           </div>
+
+          <h5 className="mt-5 text-center">Have a question? Well, we’ve got some answers.</h5>
+          <a href="" className="nav-link faq_btn">Go to Help Centre</a>
         </div>
       </div>
     </div>
