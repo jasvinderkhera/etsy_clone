@@ -5,6 +5,9 @@ function Home() {
   const [categories, setCategories] = useState([]);
   const [gifts, setGifts] = useState([]);
   const [extra, setExtra] = useState([]);
+  const [blog, setBlog] = useState([]);
+  let [toggle, setToggle] = useState("hide");
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,10 +19,11 @@ function Home() {
           throw new Error("API is not working....");
         }
         const data = await response.json().then((Data) => Data);
-        console.log(data.extraordinary);
+        console.log(data);
         setCategories(data.categories);
         setGifts(data.gifts);
         setExtra(data.extraordinary);
+        setBlog(data.blog);
       } catch (error) {}
     };
     fetchData();
@@ -330,24 +334,213 @@ function Home() {
           </div>
           <div className="discover_items border border-1">
             <div className="discover_item_img">
-            <img src="https://i.etsystatic.com/21239541/r/il/4def9d/4910855112/il_570xN.4910855112_dh40.jpg" alt="" />
-            <i className="fa-regular fa-heart wishlist_icon"></i>
+              <img
+                src="https://i.etsystatic.com/21239541/r/il/4def9d/4910855112/il_570xN.4910855112_dh40.jpg"
+                alt=""
+              />
+              <i className="fa-regular fa-heart wishlist_icon"></i>
             </div>
-            <p className="discover_item_detail d-flex align-items-center gap-3 p-3"><img src="https://i.etsystatic.com/isla/bf4e84/50083633/isla_75x75.50083633_n58k8k4l.jpg?version=0" alt="" />
-            <span>HeritageKosh</span></p>
+            <p className="discover_item_detail d-flex align-items-center gap-3 p-3">
+              <img
+                src="https://i.etsystatic.com/isla/bf4e84/50083633/isla_75x75.50083633_n58k8k4l.jpg?version=0"
+                alt=""
+              />
+              <span>HeritageKosh</span>
+            </p>
           </div>
           <div className="discover_items border border-1">
             <div className="discover_item_img">
-            <img src="https://i.etsystatic.com/30722423/r/il/561059/4023032570/il_570xN.4023032570_9326.jpg" alt="" />
-            <i className="fa-regular fa-heart wishlist_icon"></i>
+              <img
+                src="https://i.etsystatic.com/30722423/r/il/561059/4023032570/il_570xN.4023032570_9326.jpg"
+                alt=""
+              />
+              <i className="fa-regular fa-heart wishlist_icon"></i>
             </div>
-            <p className="discover_item_detail d-flex align-items-center gap-3 p-3"><img src="https://i.etsystatic.com/isla/686b26/53308097/isla_75x75.53308097_8g8tljs6.jpg?version=0" alt="" />
-            <span>HastaKushalIndia</span></p>
+            <p className="discover_item_detail d-flex align-items-center gap-3 p-3">
+              <img
+                src="https://i.etsystatic.com/isla/686b26/53308097/isla_75x75.53308097_8g8tljs6.jpg?version=0"
+                alt=""
+              />
+              <span>HastaKushalIndia</span>
+            </p>
           </div>
           <div className="discover_items border border-1">
             <div className="discover_item_img_last">
-            <img src="https://i.etsystatic.com/27064451/r/il/c99ba8/4369201826/il_570xN.4369201826_3la4.jpg" alt="" />
-            <i className="fa-regular fa-heart wishlist_icon"></i>
+              <img
+                src="https://i.etsystatic.com/27064451/r/il/c99ba8/4369201826/il_570xN.4369201826_3la4.jpg"
+                alt=""
+              />
+              <i className="fa-regular fa-heart wishlist_icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* -----------------------------------------------Blog---------------------------------------------------------------- */}
+      <div className="blog_container center_container py-5 mt-5">
+        <h3>
+          Fresh from the blog{" "}
+          <i className="fa-solid fa-arrow-right blog_arrow"></i>
+        </h3>
+        <div className="blog_items d-flex gap-3 mt-4">
+          {blog ? (
+            blog.map((item) => (
+              <div className="blog_item">
+                <div className="blog_img">
+                  <img src={item.src} alt="" />
+                </div>
+                <div className="blog_cat px-3 pt-3">
+                  <span>{item.tag}</span>
+                </div>
+                <div className="blog_details p-3">
+                  <h5>{item.heading}</h5>
+                  <p>{item.detail}</p>
+                </div>
+              </div>
+            ))
+          ) : (
+            <h4>"Data Not Found..."</h4>
+          )}
+        </div>
+      </div>
+
+      {/* -----------------------------------------------FAQ----------------------------------------------------------------- */}
+
+      <div className="faq_container py-5 mt-5">
+        <div className="center_container">
+          <h2 className="text-center fw-light fs-1">What is Etsy India?</h2>
+          <a href="" className="text-center d-block text-secondary ">
+            Read our wonderfully weird story
+          </a>
+          <div className="questions">
+            <div className="question">
+              <p className="mb-0 d-flex justify-content-between align-items-center">
+                Etsy is a global marketplace for creative and one-of-a-kind
+                goods. It’s home to a universe of special,
+                <i className="fa-solid fa-angle-down" onClick={()=>setToggle("q1")}></i>
+              </p>
+              <div
+                className="toggle_div"
+                style={
+                  toggle === "q1" ? { display: "none" } : { display: "block" }
+                }
+              >
+                <p>
+                  extraordinary items, from unique home decor pieces to trending
+                  fashion finds. Founded in 2005, Etsy began its Indian journey
+                  in 2018.
+                </p>
+                <p>
+                  Etsy is a place where creativity lives and thrives because
+                  it’s powered by people just like you. We help our community of
+                  5.9 million active sellers worldwide turn their ideas into
+                  successful small businesses. Our platform connects them with
+                  89.9 million active buyers looking for something special that
+                  enables them to express their unique identity.
+                </p>
+              </div>
+            </div>
+            <div className="question mt-5">
+              <h5>Why choose Etsy?</h5>
+              <p className="mb-0 d-flex justify-content-between align-items-center mt-4">
+             <h6> A community doing good</h6>
+                <i className="fa-solid fa-angle-down" onClick={()=>setToggle("q2")}></i>
+              </p>
+              <div
+                className="toggle_div"
+                style={
+                  toggle === "q2" ? { display: "block" } : { display: "none" }
+                }
+              >
+                <p>
+                Etsy is where people come together to make, sell, buy, and collect unique items. We’re also a community pushing for positive change for small businesses, people, and the planet. Here are some of the ways we’re making a positive impact, together:
+                </p>
+                <p>
+                Your purchases on Etsy in 2021 generated nearly $4 billion in income for small businesses.
+                </p>
+                <p>
+                We advocate for policy—at the global and local level—that benefits creative entrepreneurs and helps small businesses grow and thrive.
+                </p>
+                <p>
+                We are deepening our commitment to a sustainable future and are working towards a new goal to reach net zero emissions by 2030.
+                </p>
+                <p>
+                  <h6>Support independent creators</h6>
+                There’s no Etsy warehouse—just millions of people selling the things they love. We make the whole process easy, helping you connect directly with talented artisans from across the world (including India) to find something extraordinary.
+                </p>
+                <p>
+                  <h6>Peace of mind</h6>
+                  With Etsy Purchase Protection, you can shop confidently, knowing if something goes wrong with your order, we’ve got your back for all eligible purchases. If you ever need assistance, we are always ready to step in for support.
+                </p>
+              </div>
+            </div>
+            <div className="question mt-5">
+              <h5>What can you shop on Etsy?</h5>
+              <p className="mb-0 d-flex justify-content-between align-items-center mt-4">
+              The imagination of Etsy sellers can run far and wide, which makes our platform a home to more than 100
+                <i className="fa-solid fa-angle-down" onClick={()=>setToggle("q3")}></i>
+              </p>
+              <div
+                className="toggle_div"
+                style={
+                  toggle === "q3" ? { display: "block" } : { display: "none" }
+                }
+              >
+                <p className="mt-4">
+                <b>Home & Living:</b> Whether you’re setting up a new apartment or making small upgrades for a home refresh, you’ll find everything you need to make your home a reflection of your personality on Etsy. From traditional elements like Jaipuri bedding, masala boxes, and Madhubani paintings to modern essentials like sleek table lamps, vibrant indoor planters, and decorative platters, Etsy sellers have much to offer.
+                </p>
+                <p>
+               <b>Clothing:</b> Your unique fashion style deserves outfits that can match it. Discover tie-dye kaftans, linen shirts, hand-painted sarees, chikankari kurtis, ajrakh scarves and so much more—from small sellers who understand your aesthetic just as much as your comfort.
+                </p>
+                <p>
+                <b>Accessories:</b> The gajra for your friend’s haldi ceremony or the gemstone ring that represents your zodiac—sometimes, the little things can make the biggest impact. Etsy has it all and more! Explore a range of beautiful fashion accessories and jewellery for all the occasions you have planned.
+                </p>
+                <p>
+                <b>Gifts:</b> From birthdays and anniversaries to festivals and weddings, we’ve got all the special moments in life covered. You’ll easily find the perfect presents that not only match the unique personalities of your loved ones perfectly but also make them feel seen and cherished.
+                </p>
+              </div>
+            </div>
+            <div className="question mt-5">
+              <h5>How to buy on Etsy?</h5>
+              <p className="mb-0 d-flex justify-content-between align-items-center mt-4">
+              If you’re looking for something specific, start by putting in the keywords in our search and then using filters 
+                <i className="fa-solid fa-angle-down" onClick={()=>setToggle("q4")}></i>
+              </p>
+              <div
+                className="toggle_div"
+                style={
+                  toggle === "q4" ? { display: "block" } : { display: "none" }
+                }
+              >
+                <p>
+                to narrow down the results. You can even message the sellers with any questions or requests you may have before placing an order with them.
+                </p>
+                <p className="mt-4">
+                If you’re looking for inspiration, head on over to our <a href="" className="text-dark">Editor’s Picks</a> or look out for the latest updates on our <a href="" className="text-dark">Journal</a> to discover extraordinary items.
+                </p>
+               
+              </div>
+            </div>
+            <div className="question mt-5">
+              <h5>How to sell on Etsy?</h5>
+              <p className="mb-0 d-flex justify-content-between align-items-center mt-4">
+              You can sell handmade goods, vintage items, and craft supplies on Etsy. With low fees, powerful tools, and 
+                <i className="fa-solid fa-angle-down" onClick={()=>setToggle("q5")}></i>
+              </p>
+              <div
+                className="toggle_div"
+                style={
+                  toggle === "q5" ? { display: "block" } : { display: "none" }
+                }
+              >
+                <p>
+                support and education, we help creative entrepreneurs start, manage, and scale their businesses. Want to open a shop? All it takes is Rs. 16* to <a href="" className="text-dark">start selling on Etsy</a>.
+                </p>
+                <p className="mt-4">
+                *Listing fees are billed for 0.20 USD, so if your bank's currency is not USD, the amount in your currency may vary based on changes in the exchange rate.
+                </p>
+               
+              </div>
             </div>
           </div>
         </div>

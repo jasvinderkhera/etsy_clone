@@ -392,10 +392,10 @@
   overflow: hidden;
   transition: 200ms;
 }
-.discover_items:hover{
+.discover_items:hover {
   box-shadow: -1px 2px 5px 1px gray;
   cursor: pointer;
-    transition: 200ms;
+  transition: 200ms;
 }
 .discover_item_img {
   width: 100%;
@@ -437,3 +437,70 @@
 }
 
 /* ----------------------------------------------------------Discover end-------------------------------------------------------------- */
+
+/* ----------------------------------------------------------Blog ----------------------------------------------------------------- */
+
+.blog_arrow {
+  font-size: 15px;
+}
+
+.blog_item {
+  height: 515px;
+  width: 430px;
+  border: 1px solid rgba(128, 128, 128, 0.638);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 200ms;
+}
+
+.blog_item:hover {
+  box-shadow: -1px 2px 5px 1px rgba(128, 128, 128, 0.747);
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.blog_item .blog_img img {
+  height: 340px;
+  width: 430px;
+}
+
+.blog_cat span {
+  font-size: 13px;
+}
+
+.blog_details p {
+  font-size: 14px;
+  color: gray;
+}
+
+/* ----------------------------------------------------------Blog end-------------------------------------------------------------- */
+
+/* ----------------------------------------------------------FAQ-------------------------------------------------------------------- */
+
+.faq_container {
+  background-color: #fffbd8;
+}
+.faq_container .center_container h2 {
+  font-family: "Stag-italic";
+}
+
+.faq_container .questions {
+  width: 900px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.faq_container .questions i {
+  font-size: 14px;
+}
+
+.faq_container .questions p {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.faq_container .questions h5 {
+  color: #2638c0;
+}
+
+/* ----------------------------------------------------------FAQ end---------------------------------------------------------------- */
