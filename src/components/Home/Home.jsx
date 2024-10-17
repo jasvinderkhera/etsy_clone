@@ -19,7 +19,7 @@ function Home() {
           throw new Error("API is not working....");
         }
         const data = await response.json().then((Data) => Data);
-        console.log(data);
+        // console.log(data);
         setCategories(data.categories);
         setGifts(data.gifts);
         setExtra(data.extraordinary);
@@ -99,7 +99,7 @@ function Home() {
         </div>
       </div>
       <div className="popular_gifts center_container py-4 mt-5">
-        <h3 className="mb-4">Popular gifts right now</h3>
+        <h3 className="mb-4 text-center text-md-start">Popular gifts right now</h3>
         <div className="d-flex flex-wrap flex-md-nowrap gap-md-2 gap-1 gift_container">
           {gifts ? (
             gifts.map((item) => (
@@ -136,9 +136,13 @@ function Home() {
 
       {/* -----------------------------------------------------Halloween-------------------------------------------------- */}
 
-      <div className="halloween_shop center_container py-5 mt-5">
+      <div className="halloween_shop center_container py-md-5 py-0 pt-4 mt-5">
+      <div className="d-block d-md-none text-center">
+          <p className="halo_p1 mb-0">Editors' Picks</p>
+          <p className="halo_p2 fs-5">Halloween Shop</p>
+          </div>
         <div className="halloween_1 d-flex gap-4">
-          <div className="tagline">
+          <div className="tagline d-none d-md-block">
             <p className="halo_p1 mb-0">Editors' Picks</p>
             <p className="halo_p2">Halloween Shop</p>
             <p className="halo_p3">
@@ -206,22 +210,23 @@ function Home() {
             <i className="fa-regular fa-heart wishlist_icon"></i>
             <div className="halo_price">₹3,696</div>
           </div>
-          <div className="halo_img3 d-flex justify-content-center align-items-center">
+          <div className="halo_img3 d-none d-md-flex justify-content-center align-items-center">
             <p>Get spooky-season picks at scary good prices.</p>
           </div>
         </div>
+          <div className="d-md-none d-block text-center mt-4 fs-6"> See more <i className="fa-solid fa-arrow-right"></i></div>
       </div>
 
       {/* -----------------------------------------------------Autumn-------------------------------------------------- */}
 
-      <div className="autumn_container center_container py-5 mt-5">
+      <div className="autumn_container center_container py-md-5 py-0 pt-4 mt-md-5 mt-2">
         <div className="autumn_inner_container d-flex  border border-1">
-          <div className="autumn_cont1 p-4">
+          <div className="autumn_cont1 p-md-4 py-4 px-1">
             <div className="halloween_1 d-flex flex-wrap gap-3">
               <div className="tagline">
-                <p className="halo_p1 mb-0">Editors' Picks</p>
+                <p className="halo_p1 mb-0 text-center text-md-start">Editors' Picks</p>
                 <p className="halo_p2">Autumn hosting and decor</p>
-                <p className="halo_p3">
+                <p className="halo_p3 d-none d-md-block">
                   See more{" "}
                   <i className="fa-solid fa-arrow-right halo_right"></i>
                 </p>
@@ -286,7 +291,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="autumn_cont2">
+          <div className="autumn_cont2 d-none d-md-block">
             <div className="autmn_video2">
               <video
                 src="https://v.etsystatic.com/video/upload/ac_none,du_15,q_auto:good/original-E9B9B8E8-6F73-4D3D-AD0D-1ABCD95E47BE_tdqnix.mp4"
@@ -299,16 +304,19 @@ function Home() {
             </div>
           </div>
         </div>
+        <div className="d-block d-md-none text-center">
+          <i className="fa-solid fa-arrow-right"></i>
+        </div>
       </div>
 
       {/* -----------------------------------------------Extraordinary Items-------------------------------------------------- */}
 
-      <div className="extraordinary_items center_container py-5 mt-5">
+      <div className="extraordinary_items center_container py-md-5 py-0 pt-4 mt-md-5 mt-2">
         <h3 className="pb-2">Shop extraordinary items at special prices.</h3>
-        <div className="extraordinary_inner_cont d-flex gap-2">
+        <div className="extraordinary_inner_cont d-flex flex-wrap flex-md-nowrap gap-1">
           {extra ? (
             extra.map((item) => (
-              <div className="extraordinary_item p-2">
+              <div className="extraordinary_item p-md-2 p-1">
                 <div className="extra_o_image">
                   <img src={item.src} alt="" />
                 </div>
@@ -324,8 +332,8 @@ function Home() {
       {/* ------------------------------------------------Discover------------------------------------------------------------ */}
 
       <div className="discover center_container py-5 mt-5">
-        <div className="d-flex gap-3">
-          <div className="tagline d-flex justify-content-center align-items-start flex-column me-2">
+        <div className="d-flex flex-column flex-md-row gap-3">
+          <div className="tagline d-flex justify-content-center align-items-md-start align-items-center flex-column me-2">
             <p className="halo_p1 mb-1">Local finds? Etsy has it.</p>
             <p className="halo_p2">Discover shops in India</p>
             <a href="" className="nav-link discover_link">
@@ -338,9 +346,9 @@ function Home() {
                 src="https://i.etsystatic.com/21239541/r/il/4def9d/4910855112/il_570xN.4910855112_dh40.jpg"
                 alt=""
               />
-              <i className="fa-regular fa-heart wishlist_icon"></i>
+              <i className="fa-regular fa-heart wishlist_icon d-none d-md-block"></i>
             </div>
-            <p className="discover_item_detail d-flex align-items-center gap-3 p-3">
+            <p className="discover_item_detail d-flex align-items-center gap-md-3 p-md-3 gap-2 p-2">
               <img
                 src="https://i.etsystatic.com/isla/bf4e84/50083633/isla_75x75.50083633_n58k8k4l.jpg?version=0"
                 alt=""
@@ -354,9 +362,9 @@ function Home() {
                 src="https://i.etsystatic.com/30722423/r/il/561059/4023032570/il_570xN.4023032570_9326.jpg"
                 alt=""
               />
-              <i className="fa-regular fa-heart wishlist_icon"></i>
+              <i className="fa-regular fa-heart wishlist_icon d-none d-md-block"></i>
             </div>
-            <p className="discover_item_detail d-flex align-items-center gap-3 p-3">
+            <p className="discover_item_detail d-flex align-items-center gap-md-3 p-md-3 gap-2 p-2">
               <img
                 src="https://i.etsystatic.com/isla/686b26/53308097/isla_75x75.53308097_8g8tljs6.jpg?version=0"
                 alt=""
@@ -370,31 +378,36 @@ function Home() {
                 src="https://i.etsystatic.com/27064451/r/il/c99ba8/4369201826/il_570xN.4369201826_3la4.jpg"
                 alt=""
               />
-              <i className="fa-regular fa-heart wishlist_icon"></i>
+              <i className="fa-regular fa-heart wishlist_icon d-none d-md-block"></i>
             </div>
+            <span className="d-block d-md-none px-4">
+            HazelCraftsStore
+        </span>
           </div>
         </div>
       </div>
 
       {/* -----------------------------------------------Blog---------------------------------------------------------------- */}
       <div className="blog_container center_container py-5 mt-5">
-        <h3>
+        <h3 className="text-center text-md-start">
           Fresh from the blog{" "}
           <i className="fa-solid fa-arrow-right blog_arrow"></i>
         </h3>
-        <div className="blog_items d-flex gap-3 mt-4">
+        <div className="blog_items d-flex flex-column flex-md-row gap-3 mt-4">
           {blog ? (
             blog.map((item) => (
               <div className="blog_item">
                 <div className="blog_img">
                   <img src={item.src} alt="" />
                 </div>
-                <div className="blog_cat px-3 pt-3">
+                <div className="blogs_detailed">
+                <div className="blog_cat px-md-3 px-3 pt-3">
                   <span>{item.tag}</span>
                 </div>
-                <div className="blog_details p-3">
+                <div className="blog_details p-md-3 px-3 py-2">
                   <h5>{item.heading}</h5>
-                  <p>{item.detail}</p>
+                  <p className="d-none d-md-block">{item.detail}</p>
+                </div>
                 </div>
               </div>
             ))
@@ -407,7 +420,7 @@ function Home() {
       {/* -----------------------------------------------FAQ----------------------------------------------------------------- */}
 
       <div className="faq_container py-5 mt-5">
-        <div className="center_container">
+        <div className="center_container px-4">
           <h2 className="text-center fw-light fs-1">What is Etsy India?</h2>
           <a href="" className="text-center d-block text-secondary ">
             Read our wonderfully weird story
@@ -417,12 +430,13 @@ function Home() {
               <p className="mb-0 d-flex justify-content-between align-items-center">
                 Etsy is a global marketplace for creative and one-of-a-kind
                 goods. It’s home to a universe of special,
-                <i className="fa-solid fa-angle-down" onClick={()=>setToggle("q1")}></i>
+                <i className="fa-solid fa-angle-down" onClick={()=>(
+                  toggle === "q1" ? setToggle("hide") : setToggle("q1"))}></i>
               </p>
               <div
                 className="toggle_div"
                 style={
-                  toggle === "q1" ? { display: "none" } : { display: "block" }
+                  toggle === "q1" ? { display: "block" } : { display: "none" }
                 }
               >
                 <p>
@@ -444,7 +458,8 @@ function Home() {
               <h5>Why choose Etsy?</h5>
               <p className="mb-0 d-flex justify-content-between align-items-center mt-4">
              <h6> A community doing good</h6>
-                <i className="fa-solid fa-angle-down" onClick={()=>setToggle("q2")}></i>
+                <i className="fa-solid fa-angle-down" onClick={()=>(
+                  toggle === "q2" ? setToggle("hide") : setToggle("q2"))}></i>
               </p>
               <div
                 className="toggle_div"
@@ -478,7 +493,8 @@ function Home() {
               <h5>What can you shop on Etsy?</h5>
               <p className="mb-0 d-flex justify-content-between align-items-center mt-4">
               The imagination of Etsy sellers can run far and wide, which makes our platform a home to more than 100
-                <i className="fa-solid fa-angle-down" onClick={()=>setToggle("q3")}></i>
+                <i className="fa-solid fa-angle-down" onClick={()=>(
+                  toggle === "q3" ? setToggle("hide") : setToggle("q3"))}></i>
               </p>
               <div
                 className="toggle_div"
@@ -504,7 +520,8 @@ function Home() {
               <h5>How to buy on Etsy?</h5>
               <p className="mb-0 d-flex justify-content-between align-items-center mt-4">
               If you’re looking for something specific, start by putting in the keywords in our search and then using filters 
-                <i className="fa-solid fa-angle-down" onClick={()=>setToggle("q4")}></i>
+                <i className="fa-solid fa-angle-down" onClick={()=>(
+                  toggle === "q4" ? setToggle("hide") : setToggle("q4"))}></i>
               </p>
               <div
                 className="toggle_div"
@@ -525,7 +542,8 @@ function Home() {
               <h5>How to sell on Etsy?</h5>
               <p className="mb-0 d-flex justify-content-between align-items-center mt-4">
               You can sell handmade goods, vintage items, and craft supplies on Etsy. With low fees, powerful tools, and 
-                <i className="fa-solid fa-angle-down" onClick={()=>setToggle("q5")}></i>
+                <i className="fa-solid fa-angle-down" onClick={()=>(
+                  toggle === "q5" ? setToggle("hide") : setToggle("q5"))}></i>
               </p>
               <div
                 className="toggle_div"

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./Footer.css"
 
 function Footer() {
+  const[footerD, setFooterD] = useState("hide")
+  // console.log(footerD,"state")
   return (
     <div className='footer_container'>
         <div className="mail_container">
@@ -28,16 +30,16 @@ function Footer() {
         </div>
         <div className="footer_main_container">
           <div className="grid_container">
-            <div className="row d-flex flex-column-reverse flex-md-row">
+            <div className="row d-flex flex-column-reverse flex-md-row m-0">
               <div className="col-md-4 app_container p-md-3 py-3 px-1">
                 <img src="https://seeklogo.com/images/E/etsy-logo-9CE3C0743D-seeklogo.com.png" alt="" />
                 <Link className='nav-link app_link'>Download the Etsy App</Link>
               </div>
-              <div className="col-md-8 px-4 py-4">
-                <div className="row">
-                  <div className="col-md-3 px-4 f_list f_1">
-                    <h6 className='text-white'>Shop</h6>
-                    <ul>
+              <div className="col-md-8 px-2 px-md-4 py-4">
+                <div className="row" style={{width:"100%"}}>
+                  <div className="col-md-3 px-md-4 py-4 f_list f_1">
+                    <h6 className='text-white d-flex justify-content-between'>Shop <i className='fa-solid fa-angle-down d-md-none'></i></h6>
+                    <ul className='d-none d-md-block'>
                       <li><a href="" className='nav-link'>Gift cards</a></li>
                       <li><a href="" className='nav-link'>Etsy Registry</a></li>
                       <li><a href="" className='nav-link'>Sitemap</a></li>
@@ -47,18 +49,18 @@ function Footer() {
                       <li><a href="" className='nav-link'>Etsy Canada</a></li>
                     </ul>
                   </div>
-                  <div className="col-md-3 px-4 f_list f_1">
-                    <h6 className='text-white'>Sell</h6>
-                    <ul>
+                  <div className="col-md-3 px-md-4 py-4 f_list f_1">
+                    <h6 className='text-white d-flex justify-content-between'>Sell <i className='fa-solid fa-angle-down d-md-none'></i></h6>
+                    <ul className='d-none d-md-block'>
                       <li><a href="" className='nav-link'>Sell on Etsy</a></li>
                       <li><a href="" className='nav-link'>Teams</a></li>
                       <li><a href="" className='nav-link'>Forums</a></li>
                       <li><a href="" className='nav-link'>Affiliates & Creators</a></li>
                     </ul>
                   </div>
-                  <div className="col-md-3 px-4 f_list f_1">
-                    <h6 className='text-white'>About</h6>
-                    <ul>
+                  <div className="col-md-3 px-md-4 py-4 f_list f_1">
+                    <h6 className='text-white d-flex justify-content-between'>About <i className='fa-solid fa-angle-down d-md-none' onClick={()=>setFooterD("about")}></i></h6>
+                    <ul className='d-none d-md-block' style={footerD === "about"? {display:"block !important"}: {display:'none'}}>
                       <li><a href="" className='nav-link'>Etsy, Inc.</a></li>
                       <li><a href="" className='nav-link'>Policies</a></li>
                       <li><a href="" className='nav-link'>Investors</a></li>
@@ -68,13 +70,13 @@ function Footer() {
                       <li><a href="" className='nav-link'>Legal imprint</a></li>
                     </ul>
                   </div>
-                  <div className="col-md-3 px-4 f_list f_1">
-                    <h6 className='text-white'>Help</h6>
-                    <ul>
+                  <div className="col-md-3 px-md-4 py-4 f_list f_1">
+                    <h6 className='text-white d-flex justify-content-between'>Help <i className='fa-solid fa-angle-down d-md-none'></i></h6>
+                    <ul className='d-none d-md-block'>
                       <li><a href="" className='nav-link'>Help Centre</a></li>
                       <li><a href="" className='nav-link'>Privacy settings</a></li>
                     </ul>
-                    <div className="social_media d-flex gap-4 text-white">
+                    <div className="social_media d-flex justify-content-center gap-4 text-white">
                       <div className="footer_social">
                       <i class="fa-brands fa-instagram"></i>
                       </div>
@@ -100,7 +102,7 @@ function Footer() {
         </div>
         <div className="footer_end bg-dark">
        <div className="footer_end_container">
-        <div className="d-flex">
+        <div className="d-flex mb-3 justify-content-center mb-md-0">
           <span> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaNIVC20pTJpnaO8qV6iWQwOssCaxIkegjjQ&s" alt="" style={{height:"20px",width:"20px",borderRadius:"50%"}} /></span>
           <span className='text-white ps-2 fw-bold'>India</span>
           <span className='text-white ps-2 fw-bold'>|</span>
@@ -108,14 +110,16 @@ function Footer() {
           <span className='text-white ps-2 fw-bold'>|</span>
           <span className='text-white ps-2 fw-bold'>₹(INR)</span>
         </div>
-        <div className="d-flex gap-3 text-white">
+        <div className="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center text-white">
           <span className='ps-2'><i class="fa-regular fa-copyright"></i> 2024 Etsy, Inc</span>
-          <a href="" className='text-white'>Terms of Use</a>
+         <div className="end_links d-flex flex-wrap align-items-center justify-content-center gap-3">
+         <a href="" className='text-white'>Terms of Use</a>
           <a href="" className='text-white'>Privacy</a>
           <a href="" className='text-white'>Interest-based ads</a>
           <a href="" className='text-white'>Local Shops</a>
           <a href="" className='text-white'>Region</a>
         </div>
+         </div>
        </div>
 
         </div>

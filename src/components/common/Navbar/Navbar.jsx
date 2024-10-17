@@ -14,7 +14,7 @@ function Navbar() {
         }
     }
   return (
-    <div className='container etsy_navbar pt-md-3 pt-0 px-0 px-2 px-md-0'>
+    <div className='container etsy_navbar pt-md-3 pt-0 px-0 px-3 px-md-0'>
        <div className="top_nav_bar d-flex gap-2 align-items-center justify-content-md-center justify-content-between">
        <div className="logo">
         <img src={logo} alt="" />

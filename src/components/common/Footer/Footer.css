@@ -110,6 +110,7 @@ text-decoration: underline dotted;
         flex-direction: row;
         gap: 20px;
         background-color: var(--footer_app);
+        width: 100%;
     }
     .footer_container .footer_main_container .grid_container .app_container img {
         height: 60px;
@@ -143,5 +144,9 @@ text-decoration: underline dotted;
     height: 45px;
     padding: 4px 15px;
     border: none;
+}
+.footer_end_container{
+    width: 100%;
+    flex-direction: column;
 }
 }
