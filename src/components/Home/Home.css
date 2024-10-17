@@ -543,7 +543,7 @@
   }
   .orangebox .catg_div {
     height: 170px;
-    width: 100px;
+    width: 95px;
     margin: 0 5px;
 }
 .orangebox .catg_div img {
@@ -577,13 +577,13 @@
 
 .gift_div {
   height: 255px;
-  width: 180px;
+  width: 160px;
   border-radius: 10px;
   transition: 300ms;
 }
 .gift_div img {
   height: 140px;
-  width: 170px;
+  width: 150px;
   margin: 5px;
 }
 
@@ -619,8 +619,8 @@
 }
 
 .extraordinary_item .extra_o_image {
-  height: 170px;
-  width: 170px;
+  height: 150px;
+  width: 150px;
   border-radius: 10px;
   overflow: hidden;
 }

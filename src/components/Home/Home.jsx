@@ -35,7 +35,7 @@ function Home() {
           <h2 className="text-center">
             Discover the latest trends from small shops.
           </h2>
-          <div className="main_catg d-flex gap-md-5 gap-3 flex-wrap">
+          <div className="main_catg d-flex gap-md-5 gap-2 flex-wrap">
             <div className="catg_div">
               <img
                 src="https://i.etsystatic.com/26898518/r/il/d727b9/3193550477/il_300x300.3193550477_cydu.jpg"
@@ -98,9 +98,9 @@ function Home() {
           )}
         </div>
       </div>
-      <div className="popular_gifts center_container py-4 mt-5">
-        <h3 className="mb-4 text-center text-md-start">Popular gifts right now</h3>
-        <div className="d-flex flex-wrap flex-md-nowrap gap-md-2 gap-1 gift_container">
+      <div className="popular_gifts center_container py-md-5 py-0 pt-4 mt-5">
+        <h3 className="mb-4 text-center text-md-start px-1">Popular gifts right now</h3>
+        <div className="d-flex flex-wrap flex-md-nowrap gap-md-2 gap-1 px-1 gift_container">
           {gifts ? (
             gifts.map((item) => (
               <div className="gift_div" key={item.id}>
@@ -222,7 +222,7 @@ function Home() {
       <div className="autumn_container center_container py-md-5 py-0 pt-4 mt-md-5 mt-2">
         <div className="autumn_inner_container d-flex  border border-1">
           <div className="autumn_cont1 p-md-4 py-4 px-1">
-            <div className="halloween_1 d-flex flex-wrap gap-3">
+            <div className="halloween_1 d-flex justify-content-center flex-wrap gap-2">
               <div className="tagline">
                 <p className="halo_p1 mb-0 text-center text-md-start">Editors' Picks</p>
                 <p className="halo_p2">Autumn hosting and decor</p>
@@ -312,8 +312,8 @@ function Home() {
       {/* -----------------------------------------------Extraordinary Items-------------------------------------------------- */}
 
       <div className="extraordinary_items center_container py-md-5 py-0 pt-4 mt-md-5 mt-2">
-        <h3 className="pb-2">Shop extraordinary items at special prices.</h3>
-        <div className="extraordinary_inner_cont d-flex flex-wrap flex-md-nowrap gap-1">
+        <h3 className="pb-2 text-center text-md-start">Shop extraordinary items at special prices.</h3>
+        <div className="extraordinary_inner_cont d-flex flex-wrap justify-content-center flex-md-nowrap gap-1">
           {extra ? (
             extra.map((item) => (
               <div className="extraordinary_item p-md-2 p-1">
@@ -331,7 +331,7 @@ function Home() {
 
       {/* ------------------------------------------------Discover------------------------------------------------------------ */}
 
-      <div className="discover center_container py-5 mt-5">
+      <div className="discover center_container py-md-5 py-0 pt-4 mt-md-5 mt-2">
         <div className="d-flex flex-column flex-md-row gap-3">
           <div className="tagline d-flex justify-content-center align-items-md-start align-items-center flex-column me-2">
             <p className="halo_p1 mb-1">Local finds? Etsy has it.</p>
@@ -388,7 +388,7 @@ function Home() {
       </div>
 
       {/* -----------------------------------------------Blog---------------------------------------------------------------- */}
-      <div className="blog_container center_container py-5 mt-5">
+      <div className="blog_container center_container py-md-5 py-0 pt-4 mt-md-5 mt-2">
         <h3 className="text-center text-md-start">
           Fresh from the blog{" "}
           <i className="fa-solid fa-arrow-right blog_arrow"></i>

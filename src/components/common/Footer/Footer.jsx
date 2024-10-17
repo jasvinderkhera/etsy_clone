@@ -35,7 +35,7 @@ function Footer() {
                 <img src="https://seeklogo.com/images/E/etsy-logo-9CE3C0743D-seeklogo.com.png" alt="" />
                 <Link className='nav-link app_link'>Download the Etsy App</Link>
               </div>
-              <div className="col-md-8 px-2 px-md-4 py-4">
+              <div className="col-md-8 px-3 px-md-4 py-4">
                 <div className="row" style={{width:"100%"}}>
                   <div className="col-md-3 px-md-4 py-4 f_list f_1">
                     <h6 className='text-white d-flex justify-content-between'>Shop <i className='fa-solid fa-angle-down d-md-none'></i></h6>
