@@ -149,4 +149,10 @@ text-decoration: underline dotted;
     width: 100%;
     flex-direction: column;
 }
+.footer_container .footer_main_container .grid_container .row .f_list ul{
+    max-height: 0;
+    overflow: hidden;
+    padding: 10px 0;
+    margin-bottom: 0;
+}
 }

@@ -35,11 +35,13 @@ function Footer() {
                 <img src="https://seeklogo.com/images/E/etsy-logo-9CE3C0743D-seeklogo.com.png" alt="" />
                 <Link className='nav-link app_link'>Download the Etsy App</Link>
               </div>
-              <div className="col-md-8 px-3 px-md-4 py-4">
+              <div className="col-md-8 px-3 px-md-4 py-4 my-4 my-md-0">
                 <div className="row" style={{width:"100%"}}>
-                  <div className="col-md-3 px-md-4 py-4 f_list f_1">
-                    <h6 className='text-white d-flex justify-content-between'>Shop <i className='fa-solid fa-angle-down d-md-none'></i></h6>
-                    <ul className='d-none d-md-block'>
+                  <div className="col-md-3 px-md-4 py-md-4 py-1 f_list f_1">
+                    <h6 className='text-white d-flex justify-content-between'>Shop <i className='fa-solid fa-angle-down d-md-none' onClick={()=>{
+                      footerD === "shop" ? setFooterD("hide") : setFooterD("shop")
+                    }}></i></h6>
+                    <ul className='d-md-block' style={footerD == "shop" ? {maxHeight:"1000px", overflow:"visible"} : {maxHeight:"0"}}>
                       <li><a href="" className='nav-link'>Gift cards</a></li>
                       <li><a href="" className='nav-link'>Etsy Registry</a></li>
                       <li><a href="" className='nav-link'>Sitemap</a></li>
@@ -49,18 +51,22 @@ function Footer() {
                       <li><a href="" className='nav-link'>Etsy Canada</a></li>
                     </ul>
                   </div>
-                  <div className="col-md-3 px-md-4 py-4 f_list f_1">
-                    <h6 className='text-white d-flex justify-content-between'>Sell <i className='fa-solid fa-angle-down d-md-none'></i></h6>
-                    <ul className='d-none d-md-block'>
+                  <div className="col-md-3 px-md-4 py-md-4 py-1 f_list f_1">
+                    <h6 className='text-white d-flex justify-content-between'>Sell <i className='fa-solid fa-angle-down d-md-none' onClick={()=>{
+                      footerD === "sell" ? setFooterD("hide") : setFooterD("sell")
+                    }}></i></h6>
+                    <ul className='d-md-block' style={footerD == "sell" ? {maxHeight:"1000px", overflow:"visible"} : {maxHeight:"0"}}>
                       <li><a href="" className='nav-link'>Sell on Etsy</a></li>
                       <li><a href="" className='nav-link'>Teams</a></li>
                       <li><a href="" className='nav-link'>Forums</a></li>
                       <li><a href="" className='nav-link'>Affiliates & Creators</a></li>
                     </ul>
                   </div>
-                  <div className="col-md-3 px-md-4 py-4 f_list f_1">
-                    <h6 className='text-white d-flex justify-content-between'>About <i className='fa-solid fa-angle-down d-md-none' onClick={()=>setFooterD("about")}></i></h6>
-                    <ul className='d-none d-md-block' style={footerD === "about"? {display:"block !important"}: {display:'none'}}>
+                  <div className="col-md-3 px-md-4 py-md-4 py-1 f_list f_1">
+                    <h6 className='text-white d-flex justify-content-between'>About <i className='fa-solid fa-angle-down d-md-none' onClick={()=>{
+                      footerD === "about" ? setFooterD("hide") : setFooterD("about")
+                    }}></i></h6>
+                    <ul className='d-md-block' style={footerD == "about" ? {maxHeight:"1000px", overflow:"visible"} : {maxHeight:"0"}}>
                       <li><a href="" className='nav-link'>Etsy, Inc.</a></li>
                       <li><a href="" className='nav-link'>Policies</a></li>
                       <li><a href="" className='nav-link'>Investors</a></li>
@@ -70,9 +76,11 @@ function Footer() {
                       <li><a href="" className='nav-link'>Legal imprint</a></li>
                     </ul>
                   </div>
-                  <div className="col-md-3 px-md-4 py-4 f_list f_1">
-                    <h6 className='text-white d-flex justify-content-between'>Help <i className='fa-solid fa-angle-down d-md-none'></i></h6>
-                    <ul className='d-none d-md-block'>
+                  <div className="col-md-3 px-md-4 py-md-4 py-1 f_list f_1">
+                    <h6 className='text-white d-flex justify-content-between'>Help <i className='fa-solid fa-angle-down d-md-none' onClick={()=>{
+                      footerD === "help" ? setFooterD("hide") : setFooterD("help")
+                    }}></i></h6>
+                    <ul className='d-md-block' style={footerD == "help" ? {maxHeight:"1000px", overflow:"visible", padding:"0"} : {maxHeight:"0"}}>
                       <li><a href="" className='nav-link'>Help Centre</a></li>
                       <li><a href="" className='nav-link'>Privacy settings</a></li>
                     </ul>

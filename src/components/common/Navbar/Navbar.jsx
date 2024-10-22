@@ -2,10 +2,11 @@ import {React, useState} from 'react'
 import "./Navbar.css"
 import logo from "../../../assets/images/logo.png"
 import { Link } from 'react-router-dom'
-
+import google from "../../../assets/images/google.png"
 
 function Navbar() {
     let [cat,setCat] = useState("hide")
+    const [signin, setSignin] = useState("hide")
     function toggle(){
         if(cat === "hide"){
             setCat("show")
@@ -14,7 +15,7 @@ function Navbar() {
         }
     }
   return (
-    <div className='container etsy_navbar pt-md-3 pt-0 px-0 px-3 px-md-0'>
+    <div className='container etsy_navbar pt-md-3 pt-2 pt-md-0 px-0 px-3 px-md-0'>
        <div className="top_nav_bar d-flex gap-2 align-items-center justify-content-md-center justify-content-between">
        <div className="logo">
         <img src={logo} alt="" />
@@ -51,7 +52,7 @@ function Navbar() {
         </div>
         <div className="nav_leftside d-flex gap-2 align-items-center">
             <div className="sign_in">
-            <Link to={"/signin"} className='nav-link hover_effect'>Sign in</Link>
+            <div  className='nav-link hover_effect' onClick={()=>setSignin("show")}>Sign in</div>
             </div>
             <div className="rest_logos d-flex gap-2 align-items-center">
                 <div className="nation">
@@ -90,6 +91,42 @@ function Navbar() {
             <input type="text" className='form-control px-2' placeholder='Search for anything'/>
             <i className='fa-solid fa-magnifying-glass'></i>
         </div>
+       </div>
+       <div className="signinPage" style={ signin==="show"? {display:"flex"} : {display:"none"}}>
+        <div className="signin_container p-4">
+        <div className="top_area d-flex justify-content-between">
+            <h5>Sign in</h5>
+            <button className='btn border border-2 border-black rounded-5'>Register</button>
+        </div>
+        <div className="signin_form">
+            <label htmlFor="" className='form_label'>Email address</label>
+            <input type="email" className='form-control border border-2' />
+            <label htmlFor="" className='form_label'>Password</label>
+            <input type="password" className='form-control border border-2' />
+           <div className="terms d-flex justify-content-between align-items-center">
+          <div className="checkboxes d-flex justify-content-center align-items-center gap-2">
+          <input type="checkbox" name="" id=""  className='mt-3'/>
+          <label htmlFor="" className='mt-3'>Stay signed in</label>
+          </div>
+            <a href="" className='text-secondary mt-3 forgot_password'>Forgot your password?</a>
+           </div>
+           <button className='btn bg-dark text-white w-100 rounded-5 py-2 fw-bold mt-3'> Sign in</button>
+           <a href="" className='trouble'>Trouble signing in ?</a>
+           <div className="or_container d-flex align-items-center gap-2 mt-3">
+            <div className="left"></div>
+            <span className='text-secondary'>OR</span>
+            <div className="left"></div>
+           </div>
+           <div className="buttons_container my-3">
+            <button className='btn border border-2 border-black rounded-5 w-100 py-2 mb-3 d-flex justify-content-center gap-2 align-items-center'> <img src={google} alt="" /><span>Continue with Google</span></button>
+            <button className='btn border border-2 border-black rounded-5 w-100 py-2 mb-3 d-flex justify-content-center gap-2 align-items-center'><i className="fa-brands fa-square-facebook text-primary"></i><span>Continue with Facebook</span></button>
+            <button className='btn border border-2 border-black rounded-5 w-100 py-2 mb-3 d-flex justify-content-center gap-2 align-items-center'><i class="fa-brands fa-apple"></i><span>Continue with Apple</span></button>
+           </div>
+           <p className='terms_conditions mb-2'>By clicking Sign in, Continue with Google, Facebook, or Apple, you agree to Etsy's <a href="">Terms of Use</a> and <a href="">Privacy Policy</a>.</p>
+           <p className='etsy_policy'>Etsy may send you communications; you may change your preferences in your account settings. We'll never post without your permission.</p>
+        </div>
+        </div>
+        <i className='fa fa-x text-white fs-5' onClick={()=>setSignin("hide")}></i>
        </div>
     </div>
   )

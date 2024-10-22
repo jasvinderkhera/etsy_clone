@@ -6,7 +6,7 @@
   width: 80px;
 }
 
-.top_nav_bar{
+.top_nav_bar {
   font-size: 14px;
 }
 
@@ -20,16 +20,15 @@
   position: relative;
   transition: 400ms;
 }
-.hover_effect{
+.hover_effect {
   padding: 8px 13px;
   border-radius: 18px;
 }
-.hover_effect:hover{
-
+.hover_effect:hover {
   cursor: pointer;
   background-color: rgba(128, 128, 128, 0.256);
 }
-.categories:hover{
+.categories:hover {
   cursor: pointer;
   background-color: rgba(128, 128, 128, 0.256);
   transition: 400ms;
@@ -63,7 +62,7 @@
   padding: 10px 15px;
   font-size: 16px;
 }
-.cat_options:hover{
+.cat_options:hover {
   background-color: rgba(128, 128, 128, 0.451);
   text-decoration: underline;
 }
@@ -75,7 +74,7 @@
 
 .searchbar .nav_search_input {
   width: 780px;
-  height:45px;
+  height: 45px;
   border: 2px solid;
   border-radius: 25px;
   outline: none;
@@ -113,7 +112,7 @@
   border-radius: 50%;
   transition: 300ms;
 }
-.rest_logos .nation:hover{
+.rest_logos .nation:hover {
   background-color: rgba(100, 100, 221, 0.368);
   transition: 300ms;
 }
@@ -124,7 +123,7 @@
   border-radius: 50%;
   overflow: hidden;
 }
-.rest_logos .nation .nation_img img{
+.rest_logos .nation .nation_img img {
   height: 100%;
   width: 100%;
 }
@@ -135,7 +134,7 @@
   border-radius: 50%;
   transition: 300ms;
 }
-.rest_logos .rest_icons:hover{
+.rest_logos .rest_icons:hover {
   background-color: rgba(100, 100, 221, 0.368);
   transition: 300ms;
 }
@@ -147,8 +146,75 @@
   font-weight: 600;
 }
 
+.signinPage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.54);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 30px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.signinPage .fa-x {
+  margin-top: 50px;
+}
 
-@media screen and (max-width:768px) {
+.signin_container {
+  min-height: 100vh;
+  width: 385px;
+  background-color: white;
+  margin: 40px 0;
+  border-radius: 20px;
+}
+
+.form_label {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.signin_form input {
+  height: 45px;
+}
+
+input[type="checkbox"] {
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+}
+
+.forgot_password {
+  font-size: 14px;
+}
+
+.trouble {
+  display: block;
+  color: gray;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 25px;
+}
+
+.or_container .left {
+  height: 2px;
+  border-top: 1px solid rgba(128, 128, 128, 0.559);
+  width: 100%;
+}
+
+.terms_conditions {
+  font-size: 15px;
+}
+
+.etsy_policy {
+  font-size: 13px;
+}
+
+@media screen and (max-width: 768px) {
   .etsy_navbar {
     width: 100%;
     padding: 0 10px;
@@ -157,23 +223,23 @@
     height: 25px;
     width: 50px;
   }
-  .mob_navbar{
+  .mob_navbar {
     width: 100%;
   }
-  .mob_searchbar{
+  .mob_searchbar {
     position: relative;
   }
-  .mob_categories i{
+  .mob_categories i {
     font-size: 16px;
     padding: 10px;
     border-radius: 50%;
   }
-  .mob_searchbar input{
+  .mob_searchbar input {
     border-radius: 20px;
     height: 45px;
     width: 280px;
   }
-  .mob_searchbar i{
+  .mob_searchbar i {
     position: absolute;
     top: 7px;
     right: 7px;
@@ -182,5 +248,16 @@
     background-color: #e4864c;
     color: white;
     border-radius: 50%;
+  }
+  .signin_container {
+    min-height: 100vh;
+    width: 94%;
+    background-color: white;
+    margin: 80px 12px;
+    border-radius: 20px;
+  }
+  .signinPage .fa-x {
+    position: absolute;
+    right: 20px;
   }
 }
