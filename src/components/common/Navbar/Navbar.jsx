@@ -6,6 +6,7 @@ import google from "../../../assets/images/google.png"
 
 function Navbar() {
     let [cat,setCat] = useState("hide")
+    const [mobCat, SetMobCat] =useState("hide")
     const [signin, setSignin] = useState("hide")
     function toggle(){
         if(cat === "hide"){
@@ -85,7 +86,27 @@ function Navbar() {
        </div>
        <div className="mob_navbar d-flex py-2 d-md-none gap-2 align-items-center">
         <div className="mob_categories">
-            <i className='fa-solid fa-bars'></i>
+            <i className='fa-solid fa-bars'  onClick={()=>SetMobCat("show")}></i>
+            <div className="mob_category" style={ mobCat==="show"? {display:"flex"} : {display:"none"}}>
+                <div className="mob_cat_items p-2">
+                    <div className="mob_cat d-flex justify-content-between align-items-center">
+                        <span></span>
+                        <span className='fs-5'>Browse Categories</span>
+                        <i className='fa fa-x' onClick={()=>SetMobCat("hide")}></i>
+                    </div>
+
+                    <div className="main_mob_cat_item">
+                        <a href="" className='d-flex justify-content-between align-items-center py-3 pb-1 nav-link'>Early Festive Season Deals</a>
+                        <a href="" className='d-flex justify-content-between align-items-center py-3 pb-1 nav-link'><span>Jewellery & Accessories</span> <i className='fa fa-angle-right'></i></a>
+                        <a href="" className='d-flex justify-content-between align-items-center py-3 pb-1 nav-link'><span>Clothing & Shoes</span> <i className='fa fa-angle-right'></i></a>
+                        <a href="" className='d-flex justify-content-between align-items-center py-3 pb-1 nav-link'><span>Home & Living</span> <i className='fa fa-angle-right'></i></a>
+                        <a href="" className='d-flex justify-content-between align-items-center py-3 pb-1 nav-link'><span>Wedding & Party</span> <i className='fa fa-angle-right'></i></a>
+                        <a href="" className='d-flex justify-content-between align-items-center py-3 pb-1 nav-link'><span>Toy & Entertainment</span> <i className='fa fa-angle-right'></i></a>
+                        <a href="" className='d-flex justify-content-between align-items-center py-3 pb-1 nav-link'><span>Art & Collectibles</span> <i className='fa fa-angle-right'></i></a>
+                        <a href="" className='d-flex justify-content-between align-items-center py-3 pb-1 nav-link'><span>Craft Supplies & Tools</span> <i className='fa fa-angle-right'></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div className="mob_searchbar">
             <input type="text" className='form-control px-2' placeholder='Search for anything'/>
