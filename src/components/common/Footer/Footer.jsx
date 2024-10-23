@@ -84,7 +84,7 @@ function Footer() {
                       <li><a href="" className='nav-link'>Help Centre</a></li>
                       <li><a href="" className='nav-link'>Privacy settings</a></li>
                     </ul>
-                    <div className="social_media d-flex justify-content-center gap-4 text-white">
+                    <div className="social_media d-flex justify-content-center gap-4 text-white mt-md-5 pt-md-5">
                       <div className="footer_social">
                       <i class="fa-brands fa-instagram"></i>
                       </div>
