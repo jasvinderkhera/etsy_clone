@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import Footer from './components/common/Footer/Footer';
 
 function App() {
+  document.title="Etsy India - Shop for Handmade"
   return (
     <div className="App">
      <BrowserRouter>
